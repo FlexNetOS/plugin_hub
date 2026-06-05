@@ -14,15 +14,21 @@ In scope: Claude Code plugins and marketplaces (anything installable via a
 Out of scope: raw hooks → [`hooks_hub`](https://github.com/FlexNetOS/hooks_hub); slash
 commands → [`commands`](https://github.com/FlexNetOS/commands); MCP servers →
 [`mcp_hub`](https://github.com/FlexNetOS/mcp_hub). Rule of thumb: *if it ships as a
-plugin or marketplace bundle, it belongs here.*
+plugin or marketplace bundle (a `plugin.json` / `marketplace.json`), it belongs here.*
+
+**Not Claude Code plugins** (workspace repos that look like they'd fit but don't):
+`oh-my-pi` is a standalone *coding agent* (npm `@oh-my-pi/pi-coding-agent`; its
+marketplace.json are test fixtures) → belongs in `tool_hub`. `meta-plugins` is the **`meta`
+CLI's** own plugin registry (docker/npm/k8s), not a Claude Code marketplace → different
+plugin system, not cataloged here.
 
 ## Catalog
 
-_No entries yet — this hub is at v0.1.0 (foundation set, population pending)._
-
 | Plugin | Category | Provides | Status | Doc |
 |--------|----------|----------|--------|-----|
-| _(none)_ | | | | |
+| [ECC](entries/ecc.md) | plugin | 63 agents · 249 skills · 79 cmds · 4 hooks | stable | [doc](entries/ecc.md) · [install](snippets/ecc.marketplace.json) |
+| [oh-my-claudecode](entries/oh-my-claudecode.md) | plugin | 19 agents · 58 skills · 27 cmds · 1 hook | stable | [doc](entries/oh-my-claudecode.md) · [install](snippets/oh-my-claudecode.marketplace.json) |
+| [claude-plugins](entries/claude-plugins.md) | marketplace | lists `meta` + `gitkb` | stable | [doc](entries/claude-plugins.md) · [install](snippets/claude-plugins.marketplace.json) |
 
 ## Entry shape
 
@@ -53,7 +59,7 @@ Each `plugins[]` entry in [`registry.json`](registry.json) looks like:
 `hosting`:
 
 - `peer` — a forked plugin that is already a first-party workspace member (e.g. ECC,
-  oh-my-claudecode, oh-my-pi, claude-plugins, meta-plugins).
+  oh-my-claudecode, claude-plugins).
 - `registry-only` — a third-party marketplace pointer; nothing is hosted here.
 - `plugin_hub-child` — a fork hosted under this hub via `.meta.yaml` (`subPath`).
 

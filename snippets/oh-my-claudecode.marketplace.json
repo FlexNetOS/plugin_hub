@@ -1,0 +1,9 @@
+{
+  "name": "oh-my-claudecode",
+  "source": { "source": "git", "url": "https://github.com/FlexNetOS/oh-my-claudecode" },
+  "version": "4.14.4",
+  "_install": [
+    "claude plugin marketplace add FlexNetOS/oh-my-claudecode",
+    "claude plugin install oh-my-claudecode@oh-my-claudecode"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "gitkb",
+  "source": { "source": "git", "url": "https://github.com/FlexNetOS/claude-plugins" },
+  "plugins": [
+    { "name": "meta", "source": { "source": "git-subdir", "url": "gitkb/meta", "path": "claude-plugin" } },
+    { "name": "gitkb", "source": { "source": "git-subdir", "url": "gitkb/gitkb-claude-plugin", "path": "plugin" } }
+  ],
+  "_install": [
+    "claude plugin marketplace add FlexNetOS/claude-plugins",
+    "claude plugin install meta@gitkb",
+    "claude plugin install gitkb@gitkb"
+  ]
+}
