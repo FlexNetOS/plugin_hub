@@ -1,7 +1,7 @@
 {
   "schema": "./registry.schema.json",
-  "version": "0.2.0",
-  "updated": "2026-06-04",
+  "version": "0.3.0",
+  "updated": "2026-06-27",
   "org": "FlexNetOS",
   "hub": "plugin_hub",
   "description": "Catalog of Claude Code plugins and marketplaces used across the FlexNetOS meta workspace.",
@@ -65,6 +65,45 @@
       "doc": "entries/claude-plugins.md",
       "snippet": "snippets/claude-plugins.marketplace.json",
       "notes": "Marketplace 'gitkb' lists 2 plugins: meta (git-subdir gitkb/meta @ claude-plugin) and gitkb (git-subdir gitkb/gitkb-claude-plugin @ plugin)."
+    },
+    {
+      "id": "harness",
+      "displayName": "harness (team-architecture factory)",
+      "category": "plugin",
+      "status": "stable",
+      "summary": "Meta-skill (/harness:harness) that turns a domain description into an agent team plus the skills they use, with six team-architecture patterns; also ships packaged harnesses (meta-plugin repo-org loop, rust-port, feature-forge, bootstrap, planning-engineer) you run in place or eject into a repo.",
+      "tags": ["plugin", "meta-skill", "agent-team", "orchestration", "packaged-harness"],
+      "installSource": "git-subdir",
+      "marketplace": "harness-marketplace",
+      "pluginVersion": "1.17.0",
+      "provides": { "skills": 41, "commands": 0, "hooks": 2, "agents": 35, "mcpServers": 0 },
+      "homepage": "https://github.com/revfactory/harness",
+      "license": "Apache-2.0",
+      "forked": true,
+      "upstream": "https://github.com/revfactory/harness",
+      "hosting": "peer",
+      "workspaceMember": "harness_hub",
+      "sourcePath": "harness",
+      "repo": "git@github.com:FlexNetOS/harness_hub.git",
+      "doc": "entries/harness.md",
+      "snippet": "snippets/harness.marketplace.json",
+      "notes": "Lives in the harness_hub repo at harness/; enabled as harness@harness-marketplace via a directory marketplace. Forked from revfactory/harness (Apache-2.0). The packaged /harness:meta-plugin loop is the meta-repo's repo-organization harness; many harness:* agents power the loop tooling."
+    },
+    {
+      "id": "claude-plugins-official",
+      "displayName": "claude-plugins-official (Anthropic marketplace)",
+      "category": "marketplace",
+      "status": "stable",
+      "summary": "Anthropic's official Claude Code plugin marketplace. Used across the workspace for rust-analyzer-lsp (enabled); also provides claude-code-setup, code-review, frontend-design, github, hookify, playwright, ralph-loop, superpowers, typescript-lsp, ui5-typescript-conversion.",
+      "tags": ["marketplace", "official", "anthropic", "external"],
+      "installSource": "git",
+      "marketplace": "claude-plugins-official",
+      "homepage": "https://github.com/anthropics/claude-code",
+      "forked": false,
+      "hosting": "registry-only",
+      "doc": "entries/claude-plugins-official.md",
+      "snippet": "snippets/claude-plugins-official.marketplace.json",
+      "notes": "Third-party (Anthropic) pointer — not hosted in the FlexNetOS org. Enabled from it: rust-analyzer-lsp@claude-plugins-official. The other plugins are cached/available; enable per-repo as needed. Owner: Anthropic (support@anthropic.com)."
     }
   ]
 }
