@@ -1,0 +1,12 @@
+{
+  "name": "harness-marketplace",
+  "source": { "source": "directory", "path": "harness_hub/harness" },
+  "plugins": [
+    { "name": "harness", "source": "./", "version": "1.17.0" }
+  ],
+  "_install": [
+    "claude plugin marketplace add harness_hub/harness",
+    "claude plugin install harness@harness-marketplace"
+  ],
+  "_note": "Directory marketplace rooted at harness_hub/harness (relative to $META_ROOT). The plugin lives in the FlexNetOS/harness_hub git repo subdir 'harness'. Forked from revfactory/harness (Apache-2.0)."
+}

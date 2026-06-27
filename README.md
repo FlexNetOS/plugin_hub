@@ -29,6 +29,8 @@ plugin system, not cataloged here.
 | [ECC](entries/ecc.md) | plugin | 63 agents · 249 skills · 79 cmds · 4 hooks | stable | [doc](entries/ecc.md) · [install](snippets/ecc.marketplace.json) |
 | [oh-my-claudecode](entries/oh-my-claudecode.md) | plugin | 19 agents · 58 skills · 27 cmds · 1 hook | stable | [doc](entries/oh-my-claudecode.md) · [install](snippets/oh-my-claudecode.marketplace.json) |
 | [claude-plugins](entries/claude-plugins.md) | marketplace | lists `meta` + `gitkb` | stable | [doc](entries/claude-plugins.md) · [install](snippets/claude-plugins.marketplace.json) |
+| [harness](entries/harness.md) | plugin | 35 agents · 41 skills · 0 cmds · 2 hooks | stable | [doc](entries/harness.md) · [install](snippets/harness.marketplace.json) |
+| [claude-plugins-official](entries/claude-plugins-official.md) | marketplace | Anthropic; `rust-analyzer-lsp` enabled (+10 avail.) | stable | [doc](entries/claude-plugins-official.md) · [install](snippets/claude-plugins-official.marketplace.json) |
 
 ## Entry shape
 

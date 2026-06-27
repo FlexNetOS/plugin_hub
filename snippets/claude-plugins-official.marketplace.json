@@ -1,0 +1,23 @@
+{
+  "name": "claude-plugins-official",
+  "owner": { "name": "Anthropic", "email": "support@anthropic.com" },
+  "source": { "source": "git", "url": "https://github.com/anthropics/claude-code" },
+  "plugins": [
+    { "name": "rust-analyzer-lsp", "_enabled": true },
+    { "name": "claude-code-setup" },
+    { "name": "code-review" },
+    { "name": "frontend-design" },
+    { "name": "github" },
+    { "name": "hookify" },
+    { "name": "playwright" },
+    { "name": "ralph-loop" },
+    { "name": "superpowers" },
+    { "name": "typescript-lsp" },
+    { "name": "ui5-typescript-conversion" }
+  ],
+  "_install": [
+    "claude plugin marketplace add anthropics/claude-code",
+    "claude plugin install rust-analyzer-lsp@claude-plugins-official"
+  ],
+  "_note": "Anthropic's official marketplace (third-party). Only rust-analyzer-lsp is currently enabled across the workspace; the others are cached/available. Names github/playwright overlap FlexNetOS MCP servers cataloged in mcp_hub — those are distinct."
+}
